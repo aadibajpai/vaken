@@ -14,12 +14,7 @@ const Layout = styled.div`
 `;
 
 const Background = styled.div`
-	background: linear-gradient(
-		254.59deg,
-		${STRINGS.ACCENT_COLOR} 0%,
-		${STRINGS.BASE_ACCENT_BLENDED} 70%,
-		${STRINGS.BASE_COLOR} 100%
-	);
+	background: ${STRINGS.BASE_COLOR};
 	width: 100%;
 	height: 100vh;
 
@@ -150,7 +145,9 @@ const Sidebar: FC<{ setMenuOpen?: React.Dispatch<React.SetStateAction<boolean>> 
 								<NavButtonWhiteText>Logout</NavButtonWhiteText>
 							</ALink>
 							<HorizontalLineLogout />
-							<SmallCenteredText>{STRINGS.HACKATHON_TITLE}</SmallCenteredText>
+							<ALink href={`${STRINGS.HACKATHON_WEBSITE}`}>
+								<SmallCenteredText>{STRINGS.HACKATHON_TITLE}</SmallCenteredText>
+							</ALink>
 						</FlexEndColumn>
 					</SpaceBetweenColumn>
 				</Background>
